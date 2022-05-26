@@ -9,7 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Typing Test</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="./script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -18,26 +17,27 @@
         <h1>Typing Test</h1>
         <ul id="o-text">
             <li>Text Type</li>
-            <li><a href="">Sentence</a></li>
-            <li><a href="">Words</a></li>
-            <li><a href="">Numbers</a></li>
+            <li><a href="" id="sent">Sentence</a></li>
+            <li><a href="" id="word">Words</a></li>
+            <li><a href="" id="num">Numbers</a></li>
         </ul>
         <ul id="o-time">
             <li>Time</li>
-            <li><a href="">30 seconds</a></li>
-            <li><a href="">60 seconds</a></li>
-            <li><a href="">1 hour</a></li>
+            <li><a href="" id="30">30 seconds</a></li>
+            <li><a href="" id="60">60 seconds</a></li>
+            <li><a href="" id="3600">1 hour</a></li>
         </ul>
         <ul>
             <li>Theme</li>
-            <li><a href="">dark</a></li>
-            <li><a href="">light</a></li>
-            <li><a href="">stupid</a></li>
+            <li><a href="" id="dark">dark</a></li>
+            <li><a href="" id="light">light</a></li>
+            <li><a href="" id="stupid">stupid</a></li>
         </ul>
     </header>
     <div class="container">
         <div class="user" id="input">
             <h1 id="time">30</h1>
+            <input type="button" value="Restart">
             <textarea name="" id="inputText" cols="30" rows="10"
                 spellcheck="false">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore libero reiciendis eius aliquid voluptatibus? Laborum ducimus a illo nostrum debitis quis obcaecati ea reiciendis consectetur. Quasi, hic. Officia, velit amet.</textarea>
         </div>
@@ -50,6 +50,7 @@
             </ul>
         </div>
     </div>
+    <script src="./script.js"></script>
 </body>
 
 </html>
