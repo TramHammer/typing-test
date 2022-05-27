@@ -1,5 +1,5 @@
 const w = ["the", "of", "a", "to", "you", "was", "are", "they", "have", "one", "what", "were", "there", "your", "their", "said", "do", "many", "some", "would", "other", "into", "two", "could", "been", "who", "people", "only", " find", "water", "very", "words", "where", "most", "through", "any", "another", "come", "work", "word", "does", "put", "different", "again", "old", "great", "should", "Mr", "give", "something", "thought", "both", "often", "together", "don't", "world", "want"]
-const s = ["The quick brown fox jumps over the lazy dog", ""]
+const s = ["The quick brown fox jumps over the lazy dog", "Quickly he said", "There of"]
 let count = 30
 let x = false
 
@@ -21,23 +21,25 @@ function generateWords(type, list, words) {
         }
         return genNum
     } else if (type == 2) {
-        let genSent = s[Math.floor(Math.random() * s.length) + 1]
+        let genSent = list[Math.floor(Math.random() * list.length) + 1]
         return genSent
     }
 }
 
 function typingtest(kys) {
-    const bs = document.getElementById("inputText")
-    if (kys == bs) {
-        gfym(bs, brown)
-    }
-    
+    let bs = kys.match(/\s/g, "")
+    let words = bs ? bs.length : 0
+
+    document.getElementById("wpm-input").innerHTML = words + " WPM"
 }
+
+//document.getElementById("inputText").onkeyup = typingtest(this.value)
 window.onload = function() { 
     document.getElementById("inputText").innerHTML = generateWords(0, w, 200)
 }
 
 document.getElementById("inputText").onkeyup = function() {
+    typingtest(this.value)
     document.getElementById("s-top").style.visibility = "hidden";
     document.getElementById("s-top").style.opacity = "0"
     if (x == false) {
@@ -50,6 +52,7 @@ document.getElementById("inputText").onkeyup = function() {
               document.getElementById("s-top").style.opacity = "1"
               count = orig
               document.getElementById("time").innerHTML = orig
+              x = false
               return
             }
             count--
@@ -64,7 +67,6 @@ document.getElementById("inputText").onkeyup = function() {
             })
         }
     } 
-    typingtest(this.value)
 }
 
 document.getElementById("sent").addEventListener("click", (e) => {
