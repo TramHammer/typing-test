@@ -3,6 +3,8 @@ const s = ["The quick brown fox jumps over the lazy dog", ""]
 let count = 30
 let x = false
 
+let orig = 0
+
 function generateWords(type, list, words) {
     if (type == 0) {
         let genWords = ""
@@ -24,6 +26,13 @@ function generateWords(type, list, words) {
     }
 }
 
+function typingtest(kys) {
+    const bs = document.getElementById("inputText")
+    if (kys == bs) {
+        gfym(bs, brown)
+    }
+    
+}
 window.onload = function() { 
     document.getElementById("inputText").innerHTML = generateWords(0, w, 200)
 }
@@ -33,18 +42,29 @@ document.getElementById("inputText").onkeyup = function() {
     document.getElementById("s-top").style.opacity = "0"
     if (x == false) {
         x = true;
-        var counter = setInterval(timer, 1000); //1000 will
+        var counter = setInterval(timer, 1000); //1000 for ms
         async function timer() {
             if (count <= 0) {
               clearInterval(counter)
               document.getElementById("s-top").style.visibility = "visible"
               document.getElementById("s-top").style.opacity = "1"
+              count = orig
+              document.getElementById("time").innerHTML = orig
               return
             }
             count--
             document.getElementById("time").innerHTML = count
+
+            document.getElementById("restart").addEventListener("click", (e) => {
+                e.preventDefault()
+                clearInterval(counter)
+                document.getElementById("s-top").style.visibility = "visible"
+                document.getElementById("s-top").style.opacity = "1"
+            
+            })
         }
     } 
+    typingtest(this.value)
 }
 
 document.getElementById("sent").addEventListener("click", (e) => {
@@ -65,18 +85,21 @@ document.getElementById("num").addEventListener("click", (e) => {
 document.getElementById("30").addEventListener("click", (e) =>{
     e.preventDefault()
     count = 30
+    orig = 30
     document.getElementById("time").innerHTML = count
 })
 
 document.getElementById("60").addEventListener("click", (e) =>{
     e.preventDefault()
     count = 60
+    orig = 60
     document.getElementById("time").innerHTML = count
 })
 
 document.getElementById("3600").addEventListener("click", (e) =>{
     e.preventDefault()
     count = 3600
+    orig = 3600
     document.getElementById("time").innerHTML = count
 })
 

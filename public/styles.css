@@ -14,7 +14,7 @@ Black 0D1F2D
 
 /* color */
 
-h1, li, a {
+h1, li, a, p {
     color: #ffffff;
 }
 
@@ -71,9 +71,19 @@ header a {
 
 #input textarea {
     width: 100%;
+    border-radius: 0;
+    border: 0px none;
     resize: none;
+    background-color: rgba(0,0,0,0);
+    color: #ffffff;
+    overflow: hidden;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+}
+
+#input input[type="button"] {
     border-radius: .25rem;
-    overflow: none;
 }
 
 #results {
