@@ -1,6 +1,6 @@
 const w = ["the", "of", "a", "to", "you", "was", "are", "they", "have", "one", "what", "were", "there", "your", "their", "said", "do", "many", "some", "would", "other", "into", "two", "could", "been", "who", "people", "only", " find", "water", "very", "words", "where", "most", "through", "any", "another", "come", "work", "word", "does", "put", "different", "again", "old", "great", "should", "Mr", "give", "something", "thought", "both", "often", "together", "don't", "world", "want"]
 const s = ["The quick brown fox jumps over the lazy dog", ""]
-let count = 60
+let count = 30
 let x = false
 
 function generateWords(type, list, words) {
@@ -18,6 +18,9 @@ function generateWords(type, list, words) {
             genNum = genNum + radNum + " "
         }
         return genNum
+    } else if (type == 2) {
+        let genSent = s[Math.floor(Math.random() * s.length) + 1]
+        return genSent
     }
 }
 
@@ -26,13 +29,17 @@ window.onload = function() {
 }
 
 document.getElementById("inputText").onkeyup = function() {
+    document.getElementById("s-top").style.visibility = "hidden";
+    document.getElementById("s-top").style.opacity = "0"
     if (x == false) {
         x = true;
         var counter = setInterval(timer, 1000); //1000 will
         async function timer() {
             if (count <= 0) {
               clearInterval(counter)
-              return 
+              document.getElementById("s-top").style.visibility = "visible"
+              document.getElementById("s-top").style.opacity = "1"
+              return
             }
             count--
             document.getElementById("time").innerHTML = count
@@ -40,4 +47,40 @@ document.getElementById("inputText").onkeyup = function() {
     } 
 }
 
+document.getElementById("sent").addEventListener("click", (e) => {
+    e.preventDefault()
+    document.getElementById("inputText").innerHTML = generateWords(2, s, 1)
+})
 
+document.getElementById("word").addEventListener("click", (e) => {
+    e.preventDefault()
+    document.getElementById("inputText").innerHTML = generateWords(0, w, 2000)
+})
+
+document.getElementById("num").addEventListener("click", (e) => {
+    e.preventDefault()
+    document.getElementById("inputText").innerHTML = generateWords(1, w, 2000)
+})
+
+document.getElementById("30").addEventListener("click", (e) =>{
+    e.preventDefault()
+    count = 30
+    document.getElementById("time").innerHTML = count
+})
+
+document.getElementById("60").addEventListener("click", (e) =>{
+    e.preventDefault()
+    count = 60
+    document.getElementById("time").innerHTML = count
+})
+
+document.getElementById("3600").addEventListener("click", (e) =>{
+    e.preventDefault()
+    count = 3600
+    document.getElementById("time").innerHTML = count
+})
+
+document.getElementById("dark").addEventListener("click", (e) =>{
+    e.preventDefault()
+
+})

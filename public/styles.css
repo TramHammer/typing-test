@@ -1,8 +1,25 @@
 body {
-    background-color: rgb(255, 255, 255);
+    background-color: #0D1F2D;
     margin: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     position: relative;
+}
+/* Red #FF312E*/
+
+/*Dark
+Black 0D1F2D
+546A7B
+9EA3B0
+*/
+
+/* color */
+
+h1, li, a {
+    color: #ffffff;
+}
+
+a:hover {
+    color: #9EA3B0;
 }
 
 .container {
@@ -23,6 +40,8 @@ header {
     margin: 1rem 1rem;
     width: 100%;
     height: min-content;
+    visibility: visible;
+    transition: visibility 1s, opacity 0.5s; 
 }
 
 header h1 {
@@ -35,9 +54,14 @@ header ul {
     list-style-type: none;
     text-decoration: none;
     display: inline-block;
+
 }
 header li {
     display: inline;
+}
+
+header a {
+    color: inherit;
 }
 
 #input {
