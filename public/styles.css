@@ -77,7 +77,7 @@ header a {
     padding: 0;
 }
 
-#input textarea {
+#inputText {
     width: 100%;
     border-radius: 0;
     border: 0px none;
@@ -90,7 +90,7 @@ header a {
     height: 15rem;
 }
 
-#input p {
+#textInput {
     font-size: 1rem;
     width: 100%;
     overflow: hidden;
@@ -141,4 +141,8 @@ header a {
 
 .green {
     color: green;
+}
+
+a {
+    border: 1px solid red;
 }
