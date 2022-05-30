@@ -47,12 +47,13 @@
             </ul>
             <ul id="results" >
                 <li id="r-wpm">WPM: 101 RPM</li>
-                <li id="wcount">Word Count: <label class="green">100</label> | <label class="red">2</label></li>
+                <li id="wcount">Word Count: <label class="green" id="correctw">0</label> | <label class="red" id="incorrectw">0</label></li>
                 <li id="char">398 Words</li>
+                <li id="totchar">2092 characters</li>
             </ul>
             <section>
-                <p id="textInput"></p>
-                <textarea name="" id="inputText" cols="30" rows="10" placeholder="" autocomplete="off" autocorrect="off" spellcheck="false"></textarea>
+                <div id="textInput" contenteditable="false"></div>
+                <div id="inputText" spellcheck="false" autocapitalize="none" contenteditable="true"></div>
             </section>
         </div>
     </div>
