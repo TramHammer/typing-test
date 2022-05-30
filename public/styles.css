@@ -1,25 +1,28 @@
 body {
-    background-color: #0D1F2D;
+    background-color: #ffffff;
     margin: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     position: relative;
 }
+
 /* Red #FF312E*/
 
 /*Dark
 Black 0D1F2D
-546A7B
-9EA3B0
+14213d light blue
+fca311 traffic light yellow
+e5e5e5 grey
+ffffff white
 */
 
 /* color */
 
-h1, li, a, p {
-    color: #ffffff;
+h1, li, a, p, textarea {
+    color: rgb(0, 8, 20);
 }
 
 a:hover {
-    color: #9EA3B0;
+    color: #e5e5e5;
 }
 
 .container {
@@ -41,7 +44,7 @@ header {
     width: 100%;
     height: min-content;
     visibility: visible;
-    transition: visibility 1s, opacity 0.5s; 
+    transition: visibility 1s, opacity 0.5s;
 }
 
 header h1 {
@@ -56,6 +59,7 @@ header ul {
     display: inline-block;
 
 }
+
 header li {
     display: inline;
 }
@@ -65,8 +69,12 @@ header a {
 }
 
 #input {
+    display: inherit;
     width: auto;
     font-size: 1rem;
+    position: relative;
+    margin: 0;
+    padding: 0;
 }
 
 #input textarea {
@@ -74,29 +82,63 @@ header a {
     border-radius: 0;
     border: 0px none;
     resize: none;
-    background-color: rgba(0,0,0,0);
-    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0);
     overflow: hidden;
     font-size: 1rem;
-    border: none;
     outline: none;
+    z-index: 2;
+    height: 15rem;
+}
+
+#input p {
+    font-size: 1rem;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+    height: 15rem;
+    color:rgba(0, 8, 20, .5)
+}
+
+#input section {
+    display: grid;
+    grid-template: 1fr/ 1fr;
+    place-items: center;
+    font-family: monospace;
+}
+
+#input section > * {
+    grid-column: 1 /1;
+    grid-row: 1 / 1;
+}
+
+#input ul {
+    list-style-type: none;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#input li {
+    display: inline;
+    margin-right: 1rem;
+    transition: visibility 1s, opacity 0.5s;
 }
 
 #input input[type="button"] {
     border-radius: .25rem;
+    display: inline;
 }
 
 #results {
-    display: none;
-}
-#results ul {
     list-style-type: none;
     text-decoration-style: none;
+    visibility: visible;
+    transition: visibility 1s, opacity 0.5s;
 }
 
 .red {
     color: red;
 }
+
 .green {
     color: green;
 }
