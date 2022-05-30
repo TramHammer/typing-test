@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,22 +39,23 @@
     </header>
     <div class="container">
         <div class="user" id="input">
-            <h1 id="time">30</h1>
-            <h1 id="wpm-input">null WPM</h1>
-            <h1 id="accuracy-input">null%</h1>
-            <textarea name="" id="inputText" cols="30" rows="10" placeholder="">Lid</textarea>
-            <input type="button" value="Restart" id="restart">
-        </div>
-        <div class="user" id="results">
             <ul>
-                <li id="wpm">1000 RPM</li>
-                <li id="nominalwpm">120 RPM</li>
-                <li id="wordcount"><label class="green">100</label> | <label class="red">2</label></li>
-                <li id="errors">2</li>
+                <li id="time">30</li>
+                <li id="wpm-input">null WPM</li>
+                <li id="accuracy-input">null%</li>
+                <li><input type="button" value="Restart" id="restart"></li>
             </ul>
+            <ul id="results" >
+                <li id="r-wpm">WPM: 101 RPM</li>
+                <li id="wcount">Word Count: <label class="green">100</label> | <label class="red">2</label></li>
+                <li id="char">398 Words</li>
+            </ul>
+            <section>
+                <p id="textInput"></p>
+                <textarea name="" id="inputText" cols="30" rows="10" placeholder="" autocomplete="off" autocorrect="off" spellcheck="false"></textarea>
+            </section>
         </div>
     </div>
     <script src="./script.js"></script>
 </body>
-
 </html>
