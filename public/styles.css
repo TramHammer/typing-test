@@ -166,11 +166,18 @@ header a {
     color: red;
 }
 
-.errchar {
-    color: red;
-}
-
-.green, .corchar {
+.green {
     color: green;
 }
 
+.errchar {
+    background-color: rgba(163, 29, 29, .5);
+}
+
+.corchar {
+    background-color: rgba(64, 201, 54, .5);
+}
+
+.green {
+    color: green;
+}
