@@ -1173,28 +1173,28 @@ document.getElementById("num").addEventListener("click", (e) => {
     document.getElementById("a").innerHTML = generateWords(1, w, 2000)
 })
 
-document.getElementById("30").addEventListener("click", (e) => {
+document.getElementById("30").addEventListener("click", (e) => { //THESE DON't WORK FOR SOME REASON AND IDK
     e.preventDefault()
     timelength = 30
     orig = 30
     document.getElementById("time").innerHTML = timelength
 })
 
-document.getElementById("60").addEventListener("click", (e) => {
+document.getElementById("60").addEventListener("click", (e) => {//THESE DON't WORK FOR SOME REASON AND IDK
     e.preventDefault()
     timelength = 60
     orig = 60
     document.getElementById("time").innerHTML = timelength
 })
 
-document.getElementById("3600").addEventListener("click", (e) => {
+document.getElementById("3600").addEventListener("click", (e) => {//THESE DON't WORK FOR SOME REASON AND IDK
     e.preventDefault()
     timelength = 3600
     orig = 3600
     document.getElementById("time").innerHTML = timelength
 })
 
-document.getElementById("dark").addEventListener("click", (e) => {
+document.getElementById("dark").addEventListener("click", (e) => {//THESE DON't WORK FOR SOME REASON AND IDK
     e.preventDefault()
     for (let i = 0; i < document.getElementsByTagName("a").length; i++) {
         document.getElementsByTagName("a")[i].style.color = "#ffffff"
@@ -1213,7 +1213,7 @@ document.getElementById("dark").addEventListener("click", (e) => {
 
 let debounce = false
 let debounce1 = false
-document.getElementById("wpm").addEventListener("click", (e) => {
+document.getElementById("wpm").addEventListener("click", (e) => { //THESE DON't WORK FOR SOME REASON AND IDK 
     e.preventDefault()
     if (debounce == false) {
         document.getElementById("wpm-input").style.visibility = "hidden"
@@ -1224,7 +1224,7 @@ document.getElementById("wpm").addEventListener("click", (e) => {
     }
 })
 
-document.getElementById("accuracy").addEventListener("click", (e) => {
+document.getElementById("accuracy").addEventListener("click", (e) => { //THESE DON't WORK FOR SOME REASON AND IDK
     e.preventDefault()
     if (debounce1 == false) {
         document.getElementById("accuracy-input").style.visibility = "hidden"
