@@ -979,9 +979,10 @@ let counter
 
 let ascii
 
+let q = generateWords(0, w, 200)
+
 window.addEventListener("load", (e) => {
-    let x = generateWords(0, w, 200)
-    document.getElementById("a").innerHTML = x
+    document.getElementById("a").innerHTML = q
     document.getElementById("c").focus
     console.log("loaded");
 })
@@ -993,192 +994,37 @@ document.getElementById("c").addEventListener("focus", (e) => {
 })
 
 document.getElementById("c").addEventListener("blur", (e) => {
-    window.clearTimeout(blinktimeout);
     blinker("stop")
     console.log("blur and stop");
 })
 
-//c is actual typing
-//a is monitor errors
-//b is ??????
-//d more typed text but idk what it actually is to do
-
-function clicked() {
-    let c = document.getElementById("c")
-    let cpos = c.innerText.length
-    let store = c
-    
-    let range = document.createRange()
-    let selection = window.getSelection()
-
-    if (store.childNodes[0]) {
-        range.setStart(store.childNodes[0], cpos)
-        range.collapse(true)
-        selection.removeAllRanges()
-        selection.addRange(range)
-    }
-}
-
-function kyp(e) { //call this everytime keyup
-    console.log("called");
-    wcount = 0, charcount = 0, errcount = 0
-    document.getElementById("s-top").style.visibility = "hidden";
-    document.getElementById("s-top").style.opacity = "0"
-    document.getElementById("results").style.visibility = "hidden";
-    document.getElementById("results").style.opacity = "0"
-    console.log("transitioned");
-    keycount++
-    if (x == false) {
-        x = true
-        counter = setInterval(timer, 1000)
-        console.log("timer started");
-    }
-
-    let txt = "", aARR, cARR, i
-    let a = document.getElementById("a").innerText
-    let b = document.getElementById("b").innerText
-    let c = document.getElementById("c").innerText
-    wcount = c.match(/\s/g, "") ? c.match(/\s/g, "").length : 0
-    cursorpos = c.length
-    if ((keycount + 5) < c.length) {
-        c = "";
-        document.getElementById("ctext").innerText = c;
-    }
-    window.clearTimeout(blinktimeout)
-    blinker();
-    console.log("blinker called and started");
-    for (i = 0; i < c.length; i++) {
-        if (a[i] == c[i] || (a[i].charCodeAt(0) == 32 && c[i].charCodeAt(0) == 160)) {
-            charcount++;
-            txt =  txt + "<span class='corchar'>" + a[i] + "</span>"
-            console.log("correct", txt );
-        } else {
-            errcount++;
-            txt = txt + "<span class='errchar'>" + a[i] + "</span>"
-            console.log("incorrect", txt);
-        }
-        if (a[i] == " ") { 
-            c = c.substr(0, i) + "|" + c.substr(i + 1)
-        }
-    }
-    document.getElementById("b").innerHTML = txt + a.substr(i);
-    aARR = a.split(" ");
-    cARR = c.split("|");
-    wrongword = 0;
-    for (i = 0; i < cARR.length; i++) {
-        if (cARR[i].trim() == aARR[i].trim()) {
-            wcount++;
-        } else {
-            wrongword++;
-        }
-    }
-}
-
-function kyd(e) {
-    var cARR = [33, 34, 35, 36, 37, 38, 39, 40];
-    if (window.event) { // IE                    
-        keynum = e.keyCode;
-    } else if (e.which) {
-        keynum = e.which;
-    }
-    if (cARR.indexOf(keynum) > -1) {
-        e.preventDefault();
-        return false;
-    }
-    if (keynum == 86 && e.ctrlKey) {
-        e.preventDefault();
-        return false;
-    }
-
-}
-
-function timer() {
-    if (timelength <= 0) {
-        clearInterval(counter)
-        console.log("timer stopped");
-        document.getElementById("s-top").style.visibility = "visible"
-        document.getElementById("s-top").style.opacity = "1"
-        timelength = orig
-        console.log("transitioned");
-        document.getElementById("time").innerHTML = orig
-        x = false
-        document.getElementById("results").style.visibility = "visible"
-        document.getElementById("results").style.opacity = "1"
-        updateResults()
-        document.getElementById("a").contentEditable = false
-        document.getElementById("b").contentEditable = false
-        document.getElementById("c").contentEditable = false
-        document.getElementById("d").contentEditable = false
-        console.log("updated results");
-        return
-    }
-    timelength--
-    document.getElementById("time").innerHTML = timelength
-    console.log("updated time");
-    document.getElementById("restart").addEventListener("click", (e) => {
-        console.log("timer stopped");
-        e.preventDefault()
-        clearInterval(counter)
-        document.getElementById("s-top").style.visibility = "visible"
-        document.getElementById("s-top").style.opacity = "1"
-        timelength = orig
-        document.getElementById("time").innerHTML = orig
-        document.getElementById("a").contentEditable = false
-        document.getElementById("b").contentEditable = false
-        document.getElementById("c").contentEditable = false
-        document.getElementById("d").contentEditable = false
-        console.log("transitioned and reset");
-        x = false
-        return
-    })
-}
-
-let cursorpos = 0
-let blinktimeout, blinkstyle = ""
-function blinker(active) {
-    let n = cursorpos
-    if (blinkstyle == "") blinkstyle = "background-color:rgba(30, 144, 255,0.2)"
-
-    if (active == "stop") blinkstyle = ""
-
-    document.getElementById("a").innerHTML = document.getElementById("a").innerText.substr(0, n) + "<span style='" + blinkstyle + "'>" + document.getElementById("a").innerText.substr(n, 1) + "</span>" + document.getElementById("a").innerText.substr(n + 1)
-
-    if (active == "stop") return false
-
-    if (blinkstyle == "background-color:rgba(30, 144, 255,0.2)") {
-        blinkstyle = "background-color:none";
-    } else {
-        blinkstyle = "background-color:rgba(30, 144, 255,0.2)";
-    }
-    blinktimeout = window.setTimeout(blinker, 530);
-    console.log("blinked");
-}
-function updateResults() {
-    document.getElementById("r-wpm").innerHTML = 1
-    document.getElementById("correctw").innerHTML = wcount
-    document.getElementById("incorrectw").innerHTML = errcount
-    document.getElementById("char").innerHTML = wcount + " Words"
-    document.getElementById("totchar").innerHTML = keycount + " Characters"
-    console.log("updated");
-}
-
-
 document.getElementById("sent").addEventListener("click", (e) => {
     e.preventDefault()
-    document.getElementById("a").innerHTML = generateWords(2, s, 1)
-    document.getElementById("a").innerHTML = generateWords(2, s, 1)
+    q = generateWords(2, s, 1)
+    console.log("generated sentences");
+    document.getElementById("a").innerHTML = q
+    document.getElementById("b").innerHTML = ""
+    document.getElementById("c").innerHTML = ""
+    document.getElementById("d").innerHTML = ""
 })
 
 document.getElementById("word").addEventListener("click", (e) => {
     e.preventDefault()
-    document.getElementById("a").innerHTML = generateWords(0, w, 2000)
-    document.getElementById("a").innerHTML = generateWords(0, w, 2000)
+    q = generateWords(0, w, 2000)
+    console.log("generated words");
+    document.getElementById("a").innerHTML = q
+    document.getElementById("b").innerHTML = ""
+    document.getElementById("c").innerHTML = ""
 })
 
 document.getElementById("num").addEventListener("click", (e) => {
     e.preventDefault()
-    document.getElementById("a").innerHTML = generateWords(1, w, 2000)
-    document.getElementById("a").innerHTML = generateWords(1, w, 2000)
+    q = generateWords(1, w, 2000)
+    console.log("generated numbers");
+    document.getElementById("a").innerHTML = q
+    document.getElementById("b").innerHTML = ""
+    document.getElementById("c").innerHTML = ""
+    document.getElementById("d").innerHTML = ""
 })
 
 document.getElementById("30").addEventListener("click", (e) => { //THESE DON't WORK FOR SOME REASON AND IDK
@@ -1219,6 +1065,183 @@ document.getElementById("dark").addEventListener("click", (e) => {//THESE DON't 
     document.body.style.backgroundColor = "#0D1F2D"
 })
 
+//c is actual typing
+//a is monitor errors
+//b is ??????
+//d more typed text but idk what it actually is to do
+
+function clicked() {
+    let c = document.getElementById("c")
+    let cpos = c.innerText.length
+    let store = c
+    
+    let range = document.createRange()
+    let selection = window.getSelection()
+
+    if (store.childNodes[0]) {
+        range.setStart(store.childNodes[0], cpos)
+        range.collapse(true)
+        selection.removeAllRanges()
+        selection.addRange(range)
+    }
+}
+
+function kyp(e) { //call this everytime keyup
+    console.log("called");
+    wcount = 0, charcount = 0, errcount = 0
+    document.getElementById("s-top").style.visibility = "hidden";
+    document.getElementById("s-top").style.opacity = "0"
+    document.getElementById("results").style.visibility = "hidden";
+    document.getElementById("results").style.opacity = "0"
+    console.log("transitioned");
+    keycount++
+    if (x == false) {
+        x = true
+        orig = timelength
+        counter = setInterval(timer, 1000)
+        console.log("timer started");
+    }
+
+    let txt = "", aARR, cARR, i
+    let a = document.getElementById("a").innerText
+    let b = document.getElementById("b").innerText
+    let c = document.getElementById("c").innerText
+    wcount = c.match(/\s/g, "") ? c.match(/\s/g, "").length : 0
+    cursorpos = c.length
+    if ((keycount + 5) < c.length) {
+        c = "";
+        document.getElementById("ctext").innerText = c;
+    }
+    blinker();
+    console.log("blinker called and started");
+    for (i = 0; i < c.length; i++) {
+        if (a[i] == c[i] || (a[i].charCodeAt(0) == 32 && c[i].charCodeAt(0) == 160)) {
+            charcount++;
+            txt =  txt + "<span class='corchar'>" + a[i] + "</span>"
+            console.log("correct" );
+        } else {
+            errcount++;
+            txt = txt + "<span class='errchar'>" + a[i] + "</span>"
+            console.log("incorrect");
+        }
+        if (a[i] == " ") { 
+            c = c.substr(0, i) + "|" + c.substr(i + 1)
+        }
+    }
+    document.getElementById("b").innerHTML = txt + a.substr(i);
+    aARR = a.split(" ");
+    cARR = c.split("|");
+    wrongword = 0;
+    for (i = 0; i < cARR.length; i++) {
+        if (cARR[i].trim() == aARR[i].trim()) {
+            wcount++;
+        } else {
+            wrongword++;
+        }
+    }
+}
+
+function kyd(e) {
+    var cARR = [33, 34, 35, 36, 37, 38, 39, 40];
+    if (window.event) { // IE                    
+        keynum = e.keyCode;
+    } else if (e.which) {
+        keynum = e.which;
+    }
+    if (cARR.indexOf(keynum) > -1) {
+        e.preventDefault();
+        return false;
+    }
+    if (keynum == 86 && e.ctrlKey) {
+        e.preventDefault();
+        return false;
+    }
+
+}
+
+wcount = 0, keycount = 0, charcount, errcount, wrongword 
+ 
+function timer() {
+    if (timelength <= 0) {
+        clearInterval(counter)
+        console.log("timer stopped");
+        document.getElementById("s-top").style.visibility = "visible"
+        document.getElementById("s-top").style.opacity = "1"
+        timelength = orig
+        console.log("transitioned");
+        document.getElementById("time").innerHTML = orig
+        x = false
+        document.getElementById("results").style.visibility = "visible"
+        document.getElementById("results").style.opacity = "1"
+        updateResults()
+        document.getElementById("a").contentEditable = false
+        document.getElementById("b").contentEditable = false
+        document.getElementById("c").contentEditable = false
+        document.getElementById("d").contentEditable = false
+        console.log("updated results");
+        return
+    }
+    timelength--
+    document.getElementById("time").innerHTML = timelength
+    console.log("updated time");
+    document.getElementById("restart").addEventListener("click", (e) => {
+        console.log("timer stopped");
+        e.preventDefault()
+        clearInterval(counter)
+        document.getElementById("s-top").style.visibility = "visible"
+        document.getElementById("s-top").style.opacity = "1"
+        timelength = orig
+        document.getElementById("time").innerHTML = orig
+        document.getElementById("a").contentEditable = true
+        document.getElementById("b").contentEditable = true
+        document.getElementById("c").contentEditable = true
+        document.getElementById("d").contentEditable = true
+
+        document.getElementById("a").innerHTML = q
+        document.getElementById("b").innerHTML = ""
+        document.getElementById("c").innerHTML = ""
+        document.getElementById("d").innerHTML = ""
+        wcount = 0, keycount = 0, charcount = 0, errcount = 0,  wrongword = 0
+        updateResults()
+        console.log("transitioned and reset");
+        x = false
+        return
+    })
+}
+
+let cursorpos = 0
+let blinkstyle = ""
+function blinker(active) {
+    let n = cursorpos
+    if (blinkstyle == "") blinkstyle = "background-color:rgba(30, 144, 255,0.2)"
+
+    if (active == "stop") blinkstyle = ""
+
+    document.getElementById("a").innerHTML = document.getElementById("a").innerText.substr(0, n) + "<span style='" + blinkstyle + "'>" + document.getElementById("a").innerText.substr(n, 1) + "</span>" + document.getElementById("a").innerText.substr(n + 1)
+
+    if (active == "stop") return false
+    /*
+    if (blinkstyle == "background-color:rgba(30, 144, 255,0.2)") {
+        blinkstyle = "background-color:none";
+    } else {
+        blinkstyle = "background-color:rgba(30, 144, 255,0.2)";
+    }
+    */
+    blinkstyle = "background-color: rgba(30, 144, 255,0.2)"
+    console.log("blinked");
+}
+function updateResults() {
+    document.getElementById("r-wpm").innerHTML = "Error: 0"
+    document.getElementById("correctw").innerHTML = wcount
+    document.getElementById("incorrectw").innerHTML = errcount
+    document.getElementById("char").innerHTML = wcount + " Words"
+    document.getElementById("totchar").innerHTML = keycount + " Characters"
+    console.log("updated");
+}
+
+
+
+/*
 let debounce = false
 let debounce1 = false
 document.getElementById("wpm").addEventListener("click", (e) => { //THESE DON't WORK FOR SOME REASON AND IDK 
@@ -1244,3 +1267,4 @@ document.getElementById("accuracy").addEventListener("click", (e) => { //THESE D
         debounce1 = false
     }
 })
+*/
