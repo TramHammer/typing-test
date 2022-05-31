@@ -958,6 +958,7 @@ function generateWords(type, list, words) {
 }
 
 
+
 /* This is for words counted not words per rounds per minute
 
 function typingtest(kys) {
@@ -968,76 +969,157 @@ function typingtest(kys) {
 }
 */
 
-let wcount = 0, keycount = 0, worderror, charcount, errcount 
+let wcount = 0, keycount = 0, charcount, errcount, wrongword 
 
-let timelength = 5 //timer
+let timelength = 30 //timer
 let x = false //debounce for timer
 let orig = 0 //store timer as temp
 
-let counter;
+let counter
+
+let ascii
 
 window.addEventListener("load", (e) => {
-    document.getElementById("textInput").innerHTML =  generateWords(0, w , 200)
-    document.getElementById("inputText").innerHTML = ""
-    document.getElementById("inputText").focus
+    let x = generateWords(0, w, 200)
+    document.getElementById("a").innerHTML = x
+    document.getElementById("c").focus
+    console.log("loaded");
 })
 
-document.getElementById("inputText").addEventListener("focus", (e) => {
+document.getElementById("c").addEventListener("focus", (e) => {
     blinker()
+    console.log("focus");
+
 })
 
-document.getElementById("inputText").addEventListener("blur", (e) => {
+document.getElementById("c").addEventListener("blur", (e) => {
     window.clearTimeout(blinktimeout);
-    setBlink("stop")
+    blinker("stop")
+    console.log("blur and stop");
 })
 
-document.getElementById("inputText").onkeydown = function() {
-    typing()
+//c is actual typing
+//a is monitor errors
+//b is ??????
+//d more typed text but idk what it actually is to do
+
+function clicked() {
+    let c = document.getElementById("c")
+    let cpos = c.innerText.length
+    let store = c
+    
+    let range = document.createRange()
+    let selection = window.getSelection()
+
+    if (store.childNodes[0]) {
+        range.setStart(store.childNodes[0], cpos)
+        range.collapse(true)
+        selection.removeAllRanges()
+        selection.addRange(range)
+    }
 }
 
-function typing(e) { //call this everytime keyup
+function kyp(e) { //call this everytime keyup
+    console.log("called");
+    wcount = 0, charcount = 0, errcount = 0
     document.getElementById("s-top").style.visibility = "hidden";
     document.getElementById("s-top").style.opacity = "0"
     document.getElementById("results").style.visibility = "hidden";
     document.getElementById("results").style.opacity = "0"
+    console.log("transitioned");
     keycount++
     if (x == false) {
         x = true
         counter = setInterval(timer, 1000)
+        console.log("timer started");
     }
 
-    wcount = document.getElementById("inputText").innerText.match(/\s/g, "") ? document.getElementById("inputText").innerText.match(/\s/g, "").length : 0
-    cursorpos = inputText.length
-    window.clearTimeout(blinktimeout);
-    //add stuff here for when the text is replaced and when words are wrong and not wrong 
-    //iterate through the text using span indiviual words 
-    //let currentpos = 
-    console.log(cursorpos)
-}dfd
+    let txt = "", aARR, cARR, i
+    let a = document.getElementById("a").innerText
+    let b = document.getElementById("b").innerText
+    let c = document.getElementById("c").innerText
+    wcount = c.match(/\s/g, "") ? c.match(/\s/g, "").length : 0
+    cursorpos = c.length
+    if ((keycount + 5) < c.length) {
+        c = "";
+        document.getElementById("ctext").innerText = c;
+    }
+    window.clearTimeout(blinktimeout)
+    blinker();
+    console.log("blinker called and started");
+    for (i = 0; i < c.length; i++) {
+        if (a[i] == c[i] || (a[i].charCodeAt(0) == 32 && c[i].charCodeAt(0) == 160)) {
+            charcount++;
+            txt =  txt + "<span class='corchar'>" + a[i] + "</span>"
+            console.log("correct", txt );
+        } else {
+            errcount++;
+            txt = txt + "<span class='errchar'>" + a[i] + "</span>"
+            console.log("incorrect", txt);
+        }
+        if (a[i] == " ") { 
+            c = c.substr(0, i) + "|" + c.substr(i + 1)
+        }
+    }
+    document.getElementById("b").innerHTML = txt + a.substr(i);
+    aARR = a.split(" ");
+    cARR = c.split("|");
+    wrongword = 0;
+    for (i = 0; i < cARR.length; i++) {
+        if (cARR[i].trim() == aARR[i].trim()) {
+            wcount++;
+        } else {
+            wrongword++;
+        }
+    }
+}
+
+function kyd(e) {
+    var cARR = [33, 34, 35, 36, 37, 38, 39, 40];
+    if (window.event) { // IE                    
+        keynum = e.keyCode;
+    } else if (e.which) {
+        keynum = e.which;
+    }
+    if (cARR.indexOf(keynum) > -1) {
+        e.preventDefault();
+        return false;
+    }
+    if (keynum == 86 && e.ctrlKey) {
+        e.preventDefault();
+        return false;
+    }
+
+}
 
 function timer() {
     if (timelength <= 0) {
         clearInterval(counter)
+        console.log("timer stopped");
         document.getElementById("s-top").style.visibility = "visible"
         document.getElementById("s-top").style.opacity = "1"
         timelength = orig
+        console.log("transitioned");
         document.getElementById("time").innerHTML = orig
         x = false
         document.getElementById("results").style.visibility = "visible"
         document.getElementById("results").style.opacity = "1"
         updateResults()
+        console.log("updated results");
         return
     }
     timelength--
     document.getElementById("time").innerHTML = timelength
-
+    console.log("updated time");
     document.getElementById("restart").addEventListener("click", (e) => {
+        console.log("timer stopped");
         e.preventDefault()
         clearInterval(counter)
         document.getElementById("s-top").style.visibility = "visible"
         document.getElementById("s-top").style.opacity = "1"
         timelength = orig
         document.getElementById("time").innerHTML = orig
+        console.log("transitioned and reset");
         x = false
         return
     })
@@ -1051,7 +1133,7 @@ function blinker(active) {
 
     if (active == "stop") blinkstyle = ""
 
-    document.getElementById("inputText").innerHTML = document.getElementById("inputText").innerText.substring(0, n) + "<span style='" + blinkstyle + "'>" + document.getElementById("inputText").innerText.substring(n, 1) + "</span>" + document.getElementById("inputText").innerText.substring(n + 1)
+    document.getElementById("a").innerHTML = document.getElementById("a").innerText.substr(0, n) + "<span style='" + blinkstyle + "'>" + document.getElementById("a").innerText.substr(n, 1) + "</span>" + document.getElementById("a").innerText.substr(n + 1)
 
     if (active == "stop") return false
 
@@ -1061,65 +1143,34 @@ function blinker(active) {
         blinkstyle = "background-color:rgba(30, 144, 255,0.2)";
     }
     blinktimeout = window.setTimeout(blinker, 530);
+    console.log("blinked");
 }
-
 function updateResults() {
     document.getElementById("r-wpm").innerHTML = 1
-    document.getElementById("correctw").innerHTML = 1
-    document.getElementById("incorrectw").innerHTML = 1
+    document.getElementById("correctw").innerHTML = wcount
+    document.getElementById("incorrectw").innerHTML = errcount
     document.getElementById("char").innerHTML = wcount + " Words"
     document.getElementById("totchar").innerHTML = keycount + " Characters"
+    console.log("updated");
 }
-//document.getElementById("inputText").onkeyup = typingtest(this.value)
 
-/* THIS NEEDS TO BE FIXED AND KYS NEEDS TO BE REASSIGNED 
-document.getElementById("inputText").onkeydown = function () {
-    document.getElementById("s-top").style.visibility = "hidden";
-    document.getElementById("s-top").style.opacity = "0"
-    if (x == false) {
-        x = true;
-        var counter = setInterval(timer, 1000); //1000 for ms
-        async function timer() {
-            if (count <= 0) {
-                clearInterval(counter)
-                document.getElementById("s-top").style.visibility = "visible"
-                document.getElementById("s-top").style.opacity = "1"
-                count = orig
-                document.getElementById("time").innerHTML = orig
-                x = false
-                return
-            }
-            count--
-            document.getElementById("time").innerHTML = count
-
-            document.getElementById("restart").addEventListener("click", (e) => {
-                e.preventDefault()
-                clearInterval(counter)
-                document.getElementById("s-top").style.visibility = "visible"
-                document.getElementById("s-top").style.opacity = "1"
-
-            })
-        }
-    }
-}
-*/
 
 document.getElementById("sent").addEventListener("click", (e) => {
     e.preventDefault()
-    document.getElementById("textInput").innerHTML = generateWords(2, s, 1)
-    document.getElementById("inputText").innerHTML = ""
+    document.getElementById("a").innerHTML = generateWords(2, s, 1)
+    document.getElementById("a").innerHTML = generateWords(2, s, 1)
 })
 
 document.getElementById("word").addEventListener("click", (e) => {
     e.preventDefault()
-    document.getElementById("textInput").innerHTML = generateWords(0, w, 2000)
-    document.getElementById("inputText").innerHTML = ""
+    document.getElementById("a").innerHTML = generateWords(0, w, 2000)
+    document.getElementById("a").innerHTML = generateWords(0, w, 2000)
 })
 
 document.getElementById("num").addEventListener("click", (e) => {
     e.preventDefault()
-    document.getElementById("textInput").innerHTML = generateWords(1, w, 2000)
-    document.getElementById("inputText").innerHTML = ""
+    document.getElementById("a").innerHTML = generateWords(1, w, 2000)
+    document.getElementById("a").innerHTML = generateWords(1, w, 2000)
 })
 
 document.getElementById("30").addEventListener("click", (e) => {
@@ -1157,33 +1208,8 @@ document.getElementById("dark").addEventListener("click", (e) => {
     for (let i = 0; i < document.getElementsByTagName("li").length; i++) {
         document.getElementsByTagName("li")[i].style.color = "#ffffff"
     }
-    for (let i = 0; i < document.getElementsByTagName("textarea").length; i++) {
-        document.getElementsByTagName("textarea")[i].style.color = "#ffffff"
-    }
     document.body.style.backgroundColor = "#0D1F2D"
 })
-
-/* light mode I did not change the colors yet 
-document.getElementById("light").addEventListener("click", (e) => {
-    e.preventDefault()
-    for (let i = 0; i < document.getElementsByTagName("a").length; i++) {
-        document.getElementsByTagName("a")[i].style.color = "#ffffff"
-    }
-    for (let i = 0; i < document.getElementsByTagName("p").length; i++) {
-        document.getElementsByTagName("p")[i].style.color = "#ffffff"
-    }
-    for (let i = 0; i < document.getElementsByTagName("h1").length; i++) {
-        document.getElementsByTagName("h1")[i].style.color = "#ffffff"
-    }
-    for (let i = 0; i < document.getElementsByTagName("li").length; i++) {
-        document.getElementsByTagName("li")[i].style.color = "#ffffff"
-    }
-    for (let i = 0; i < document.getElementsByTagName("textarea").length; i++) {
-        document.getElementsByTagName("textarea")[i].style.color = "#ffffff"
-    }
-    document.body.style.backgroundColor = "#0D1F2D"
-})
-*/
 
 let debounce = false
 let debounce1 = false
