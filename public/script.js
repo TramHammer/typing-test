@@ -776,7 +776,7 @@ const w = ["a",
     "successful",
     "such",
     "suddenly",
-    //"suffer",
+    "suffer",
     "suggest",
     "summer",
     "support",
@@ -1105,6 +1105,10 @@ function timer() {
         document.getElementById("results").style.visibility = "visible"
         document.getElementById("results").style.opacity = "1"
         updateResults()
+        document.getElementById("a").contentEditable = false
+        document.getElementById("b").contentEditable = false
+        document.getElementById("c").contentEditable = false
+        document.getElementById("d").contentEditable = false
         console.log("updated results");
         return
     }
@@ -1119,6 +1123,10 @@ function timer() {
         document.getElementById("s-top").style.opacity = "1"
         timelength = orig
         document.getElementById("time").innerHTML = orig
+        document.getElementById("a").contentEditable = false
+        document.getElementById("b").contentEditable = false
+        document.getElementById("c").contentEditable = false
+        document.getElementById("d").contentEditable = false
         console.log("transitioned and reset");
         x = false
         return
