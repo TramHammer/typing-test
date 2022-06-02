@@ -1060,13 +1060,14 @@ window.onload = () => {
         for (let i = 0; i < document.getElementsByTagName("li").length; i++) {
             document.getElementsByTagName("li")[i].style.color = "#ffffff"
         }
-        document.getElementsByClassName("divt").backgroundColor = "0D1F2D"
-        document.getElementsByClassName("divt").color = "#ffffff"
-    document.body.style.backgroundColor = "#0D1F2D"
+        for (let i = 0; i < document.getElementsByClassName("divt").length; i++) {
+            document.getElementsByClassName("divt")[i].style.backgroundColor = "rgba(0,0,0,0)"
+            document.getElementsByClassName("divt")[i].style.color = "#ffffff"
+        }
+        document.body.style.backgroundColor = "#0D1F2D"
     })
 
     let debounce = false
-    let debounce1 = false
     document.getElementById("wpm").addEventListener("click", (e) => { //THESE DON't WORK FOR SOME REASON AND IDK 
         e.preventDefault()
         if (debounce == false) {
@@ -1075,19 +1076,6 @@ window.onload = () => {
         } else {
             document.getElementById("wpm-input").style.visibility = "visible"
             debounce = false
-        }
-    })
-
-    document.getElementById("accuracy").addEventListener("click", (e) => { //THESE DON't WORK FOR SOME REASON AND IDK
-        e.preventDefault()
-        if (debounce1 == false) {
-            document.getElementById("accuracy-input").style.visibility = "hidden"
-            document.getElementById("accuracy-input").style.opacity = "0"
-            debounce1 = true
-        } else {
-            document.getElementById("accuracy-input").style.visibility = "visible"
-            document.getElementById("accuracy-input").style.opacity = "1"
-            debounce1 = false
         }
     })
     console.log("assigned events")
@@ -1270,4 +1258,3 @@ function updateResults() {
     document.getElementById("totchar").innerHTML = keycount + " Characters"
     console.log("updated");
 }
-
