@@ -977,93 +977,121 @@ let orig = 0 //store timer as temp
 
 let counter
 
-let ascii
-
 let q = generateWords(0, w, 200)
 
-window.addEventListener("load", (e) => {
+window.onload = () => {
     document.getElementById("a").innerHTML = q
-    document.getElementById("c").focus
     console.log("loaded");
-})
+    
+    document.getElementById("c").addEventListener("focus", (e) => {
+        blinker()
+        console.log("focus");
+    
+    })
+    
+    document.getElementById("c").addEventListener("blur", (e) => {
+        blinker("stop")
+        console.log("blur and stop");
+    })
+    //FIX THIS GARBAGE Z INDEX IS SCREWED
+    //HEADER IS SOMEHOW BELOW CONTAINER WHICH PREVENTS BUTTONS FROM WORKING
+    //☻☻☻☻☻☺☺☺☺
+    document.getElementById("sent").addEventListener("click", function(e) {
+        e.preventDefault()
+        q = generateWords(2, s, 1)
+        console.log("generated sentences");
+        document.getElementById("a").innerHTML = q
+        document.getElementById("b").innerHTML = ""
+        document.getElementById("c").innerHTML = ""
+        document.getElementById("d").innerHTML = ""
+    })
+    
+    document.getElementById("word").addEventListener("click", function(e) {
+        e.preventDefault()
+        q = generateWords(0, w, 2000)
+        console.log("generated words");
+        document.getElementById("a").innerHTML = q
+        document.getElementById("b").innerHTML = ""
+        document.getElementById("c").innerHTML = ""
+    })
+    
+    document.getElementById("num").addEventListener("click", function(e) {
+        e.preventDefault()
+        q = generateWords(1, w, 2000)
+        console.log("generated numbers");
+        document.getElementById("a").innerHTML = q
+        document.getElementById("b").innerHTML = ""
+        document.getElementById("c").innerHTML = ""
+        document.getElementById("d").innerHTML = ""
+    })
 
-document.getElementById("c").addEventListener("focus", (e) => {
-    blinker()
-    console.log("focus");
-
-})
-
-document.getElementById("c").addEventListener("blur", (e) => {
-    blinker("stop")
-    console.log("blur and stop");
-})
-
-document.getElementById("sent").addEventListener("click", (e) => {
-    e.preventDefault()
-    q = generateWords(2, s, 1)
-    console.log("generated sentences");
-    document.getElementById("a").innerHTML = q
-    document.getElementById("b").innerHTML = ""
-    document.getElementById("c").innerHTML = ""
-    document.getElementById("d").innerHTML = ""
-})
-
-document.getElementById("word").addEventListener("click", (e) => {
-    e.preventDefault()
-    q = generateWords(0, w, 2000)
-    console.log("generated words");
-    document.getElementById("a").innerHTML = q
-    document.getElementById("b").innerHTML = ""
-    document.getElementById("c").innerHTML = ""
-})
-
-document.getElementById("num").addEventListener("click", (e) => {
-    e.preventDefault()
-    q = generateWords(1, w, 2000)
-    console.log("generated numbers");
-    document.getElementById("a").innerHTML = q
-    document.getElementById("b").innerHTML = ""
-    document.getElementById("c").innerHTML = ""
-    document.getElementById("d").innerHTML = ""
-})
-
-document.getElementById("30").addEventListener("click", (e) => { //THESE DON't WORK FOR SOME REASON AND IDK
-    e.preventDefault()
-    timelength = 30
-    orig = 30
-    document.getElementById("time").innerHTML = timelength
-})
-
-document.getElementById("60").addEventListener("click", (e) => {//THESE DON't WORK FOR SOME REASON AND IDK
-    e.preventDefault()
-    timelength = 60
-    orig = 60
-    document.getElementById("time").innerHTML = timelength
-})
-
-document.getElementById("3600").addEventListener("click", (e) => {//THESE DON't WORK FOR SOME REASON AND IDK
-    e.preventDefault()
-    timelength = 3600
-    orig = 3600
-    document.getElementById("time").innerHTML = timelength
-})
-
-document.getElementById("dark").addEventListener("click", (e) => {//THESE DON't WORK FOR SOME REASON AND IDK
-    e.preventDefault()
-    for (let i = 0; i < document.getElementsByTagName("a").length; i++) {
-        document.getElementsByTagName("a")[i].style.color = "#ffffff"
-    }
-    for (let i = 0; i < document.getElementsByTagName("p").length; i++) {
-        document.getElementsByTagName("p")[i].style.color = "#ffffff"
-    }
-    for (let i = 0; i < document.getElementsByTagName("h1").length; i++) {
-        document.getElementsByTagName("h1")[i].style.color = "#ffffff"
-    }
-    for (let i = 0; i < document.getElementsByTagName("li").length; i++) {
-        document.getElementsByTagName("li")[i].style.color = "#ffffff"
-    }
+    document.getElementById("30s").addEventListener("click", function(e) {//THESE DON't WORK FOR SOME REASON AND IDK
+        e.preventDefault()
+        timelength = 30
+        orig = 30
+        document.getElementById("time").innerHTML = timelength
+    })
+    
+    document.getElementById("60s").addEventListener("click", function(e) {//THESE DON't WORK FOR SOME REASON AND IDK
+        e.preventDefault()
+        timelength = 60
+        orig = 60
+        document.getElementById("time").innerHTML = timelength
+    })
+    
+    document.getElementById("3600s").addEventListener("click", function(e) {//THESE DON't WORK FOR SOME REASON AND IDK
+        e.preventDefault()
+        timelength = 3600
+        orig = 3600
+        document.getElementById("time").innerHTML = timelength
+    })
+    
+    document.getElementById("dark").addEventListener("click", (e) => {
+        e.preventDefault()
+        for (let i = 0; i < document.getElementsByTagName("a").length; i++) {
+            document.getElementsByTagName("a")[i].style.color = "#ffffff"
+        }
+        for (let i = 0; i < document.getElementsByTagName("p").length; i++) {
+            document.getElementsByTagName("p")[i].style.color = "#ffffff"
+        }
+        for (let i = 0; i < document.getElementsByTagName("h1").length; i++) {
+            document.getElementsByTagName("h1")[i].style.color = "#ffffff"
+        }
+        for (let i = 0; i < document.getElementsByTagName("li").length; i++) {
+            document.getElementsByTagName("li")[i].style.color = "#ffffff"
+        }
+        document.getElementsByClassName("divt").backgroundColor = "0D1F2D"
+        document.getElementsByClassName("divt").color = "#ffffff"
     document.body.style.backgroundColor = "#0D1F2D"
-})
+    })
+
+    let debounce = false
+    let debounce1 = false
+    document.getElementById("wpm").addEventListener("click", (e) => { //THESE DON't WORK FOR SOME REASON AND IDK 
+        e.preventDefault()
+        if (debounce == false) {
+            document.getElementById("wpm-input").style.visibility = "hidden"
+            debounce = true
+        } else {
+            document.getElementById("wpm-input").style.visibility = "visible"
+            debounce = false
+        }
+    })
+
+    document.getElementById("accuracy").addEventListener("click", (e) => { //THESE DON't WORK FOR SOME REASON AND IDK
+        e.preventDefault()
+        if (debounce1 == false) {
+            document.getElementById("accuracy-input").style.visibility = "hidden"
+            document.getElementById("accuracy-input").style.opacity = "0"
+            debounce1 = true
+        } else {
+            document.getElementById("accuracy-input").style.visibility = "visible"
+            document.getElementById("accuracy-input").style.opacity = "1"
+            debounce1 = false
+        }
+    })
+    console.log("assigned events")
+}
 
 //c is actual typing
 //a is monitor errors
@@ -1098,6 +1126,8 @@ function kyp(e) { //call this everytime keyup
     if (x == false) {
         x = true
         orig = timelength
+        document.getElementById("wpm-input").style.visibility = "visible"
+        document.getElementById("accuracy-input").style.visibility = "visible"
         counter = setInterval(timer, 1000)
         console.log("timer started");
     }
@@ -1201,6 +1231,8 @@ function timer() {
         document.getElementById("b").innerHTML = ""
         document.getElementById("c").innerHTML = ""
         document.getElementById("d").innerHTML = ""
+        document.getElementById("wpm-input").style.visibility = "hidden"
+        document.getElementById("accuracy-input").style.visibility = "hidden"
         wcount = 0, keycount = 0, charcount = 0, errcount = 0,  wrongword = 0
         updateResults()
         console.log("transitioned and reset");
@@ -1239,32 +1271,3 @@ function updateResults() {
     console.log("updated");
 }
 
-
-
-/*
-let debounce = false
-let debounce1 = false
-document.getElementById("wpm").addEventListener("click", (e) => { //THESE DON't WORK FOR SOME REASON AND IDK 
-    e.preventDefault()
-    if (debounce == false) {
-        document.getElementById("wpm-input").style.visibility = "hidden"
-        debounce = true
-    } else {
-        document.getElementById("wpm-input").style.visibility = "visible"
-        debounce = false
-    }
-})
-
-document.getElementById("accuracy").addEventListener("click", (e) => { //THESE DON't WORK FOR SOME REASON AND IDK
-    e.preventDefault()
-    if (debounce1 == false) {
-        document.getElementById("accuracy-input").style.visibility = "hidden"
-        document.getElementById("accuracy-input").style.opacity = "0"
-        debounce1 = true
-    } else {
-        document.getElementById("accuracy-input").style.visibility = "visible"
-        document.getElementById("accuracy-input").style.opacity = "1"
-        debounce1 = false
-    }
-})
-*/
