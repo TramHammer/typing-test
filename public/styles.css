@@ -17,12 +17,11 @@ ffffff white
 
 /* color */
 
-h1, li, a, p, textarea {
-    color: rgb(0, 8, 20);
-}
-
-a:hover {
+a:hover() {
     color: #e5e5e5;
+}
+h1, li, a, p {
+    color: rgb(0, 8, 20);
 }
 
 .container {
@@ -30,6 +29,7 @@ a:hover {
     margin-left: 15%;
     margin-right: 15%;
     width: auto;
+    z-index: 9;
 }
 
 .user {
@@ -38,7 +38,12 @@ a:hover {
     width: auto;
 }
 
+.user ul {
+    font-size: 1.1rem;
+}
+
 header {
+    z-index: 9999;
     float: left;
     margin: 1rem 1rem;
     width: 100%;
@@ -57,7 +62,7 @@ header ul {
     list-style-type: none;
     text-decoration: none;
     display: inline-block;
-
+    font-size: 1.1rem;
 }
 
 header li {
@@ -66,6 +71,8 @@ header li {
 
 header a {
     color: inherit;
+    position: relative;
+    z-index: 9999;
 }
 
 #input {
