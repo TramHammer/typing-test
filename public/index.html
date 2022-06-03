@@ -21,15 +21,16 @@
         </ul>
         <ul id="o-time">
             <li>Time</li>
+            <li><a href="" id="15s">15 seconds</a></li>
             <li><a href="" id="30s">30 seconds</a></li>
             <li><a href="" id="60s">60 seconds</a></li>
             <li><a href="" id="3600s">1 hour</a></li>
+            <li><a href="" id="31536000s">1 year</a></li>
         </ul>
         <ul>
             <li>Theme</li>
             <li><a href="" id="dark">dark</a></li>
             <li><a href="" id="light">light</a></li>
-            <li><a href="" id="stupid">stupid</a></li>
         </ul>
         <ul>
             <li>Show/Hide</li>
@@ -44,18 +45,18 @@
                 <li><input type="button" value="Restart" id="restart"></li>
             </ul>
             <ul id="results" >
-                <li id="r-wpm">WPM: 101 RPM</li>
-                <li id="wcount">Word Count: <label class="green" id="correctw">0</label> | <label class="red" id="incorrectw">0</label></li>
-                <li id="char">398 Words</li>
-                <li id="totchar">2092 characters</li>
+                <li id="r-wpm">WPM: % RPM</li>
+                <li id="wcount">Word Count: <label class="green" id="correctw">%</label> | <label class="red" id="incorrectw">%</label></li>
+                <li id="totchar">Character Count: <label class="green" id="correctc">%</label> | <label class="red" id="incorrectc">%</label></li>
+                <li id="char">% Words</li>
             </ul>
             <section>
                 <div class="divt" id="a" spellcheck="false" autocapitalize="none" contenteditable="true"></div>
                 <div class="divt" id="b" spellcheck="false" autocapitalize="none" contenteditable="true"></div>
-                <div class="divt" id="c" spellcheck="false" autocapitalize="none" contenteditable="true" autocomplete="off" onkeydown="kyd(event)" onkeyup="kyp(event)" onmouseup="clicked()"></div>
-                <div class="divt" id="d" contenteditable="true"></div>
+                <div class="divt" id="c" spellcheck="false" autocapitalize="none" contenteditable="true" autocomplete="off" onkeyup="kyp(event)" onmouseup="clicked()"></div>
             </section>
         </div>
+        <p id="material">This page uses material from the Wikipedia article <a href="" id="mat-link">""</a>, which is released under the <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-Share-Alike License 3.0</a>.</p>
     </div>
     <script src="./script.js"></script>
 </body>
