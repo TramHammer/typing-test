@@ -918,22 +918,41 @@ const w = ["a",
     "your",
     "yourself"
 ]
-const s = ["The quick brown fox jumps over the lazy dog.",
-"The Papuan mountain pigeon (Gymnophaps albertisii) is a species of bird in the pigeon family Columbidae. It is found in the Bacan Islands, New Guinea, the D'Entrecasteaux Islands, and the Bismarck Archipelago, where it inhabits primary forest, montane forest, and lowlands. It is a medium-sized species of pigeon, being 33-36 cm (13-14 in) long and weighing 259 g (9.1 oz) on average. Adult males have slate-grey upperparts, chestnut-maroon throats and bellies, whitish breasts, and a pale grey terminal tail band. The lores and orbital region are bright red. Females are similar, but have grayish breasts and grey edges to the throat feathers.",
-"For two electrical systems to be synchronized, both systems must operate at the same frequency, and the phase angle between the systems must be zero (and two polyphase systems must have the same phase sequence). Synchroscopes measure and display the frequency difference and phase angle between two power systems. Only when these two quantities are zero is it safe to connect the two systems together. Connecting two unsynchronized AC power systems together is likely to cause high currents to flow, which will severely damage any equipment not protected by fuses or circuit breakers.",
-"Once upon a time there was an old mother pig who had three little pigs and not enough food to feed them. So when they were old enough, she sent them out into the world to seek their fortunes.The first little pig was very lazy. He didn't want to work at all and he built his house out of straw. The second little pig worked a little bit harder but he was somewhat lazy too and he built his house out of sticks. Then, they sang and danced and played together the rest of the day.",
-"The third little pig worked hard all day and built his house with bricks. It was a sturdy house complete with a fine fireplace and chimney. It looked like it could withstand the strongest winds. The next day, a wolf happened to pass by the lane where the three little pigs lived; and he saw the straw house, and he smelled the pig inside. He thought the pig would make a mighty fine meal and his mouth began to water.",
-'A touch typist starts by placing their fingers on the "start position" in the middle row and knows which finger to move and how much to move it for reaching any required key. Learning typically includes first printing exercises containing only letters on or near the standard position and then gradually mastering other rows. It is important to learn placing fingers into the start position blindly as the hands are frequently raised from the keyboard to operate the line feed lever (in the past) or (more recently) the computer mouse. The keys F and J frequently contain some surface features that allow the typist to recognize them by touch alone, thus removing the need to look down at the keys to reset the fingers at the home row.',
-'Extreme ironing (also called EI) is an extreme sport in which people take ironing boards to remote locations and iron items of clothing. According to the Extreme Ironing Bureau, extreme ironing is "the latest danger sport that combines the thrills of an extreme outdoor activity with the satisfaction of a well-pressed shirt." Part of the attraction and interest the media has shown towards extreme ironing seems to center on the issue of whether it is really a sport or not. It is widely considered to be tongue-in-cheek.',
-"Sequential images of the collapse were taken by an outdoor security camera located at the parking lot entrance of the control facility for the Lower Saint Anthony Falls Lock and Dam. The immediate aftermath of the collapse was also captured by a Mn/DOT traffic camera that was facing away from the bridge during the collapse itself. The federal government immediately launched a National Transportation Safety Board (NTSB) investigation. NTSB chairman Mark Rosenker, along with a number of investigators, arrived on scene nine hours after the collapse. Rosenker remained in Minneapolis for nearly one week, serving as the government's designated primary interface with federal, state and local officials as well as briefing the press on the status of the investigation.",
-"M-6, or the Paul B. Henry Freeway, is a 19.7-mile-long (31.7 km) east-west freeway and state trunkline highway in the United States that serves portions of southern Kent and eastern Ottawa counties south of Grand Rapids, Michigan. Although the freeway is named for Paul B. Henry, local residents and the press continue to use the original name, South Beltline as well on occasion. The freeway connects Interstate 196 (I-196) on the west with I-96 on the east. M-6 also provides a connection to U.S. Highway 131 (US 131) in the middle of its corridor while running through several townships on the south side of the Grand Rapids metropolitan area in Western Michigan. Each end is in a rural area while the central section has suburban development along the trunkline.",
-"Down in the street the wind flapped the torn poster to and fro, and the word INGSOC fitfully appeared and vanished. Ingsoc. The sacred principles of Ingsoc. Newspeak, doublethink, the mutability of the past. He felt as though he were wandering in the forests of the sea bottom, lost in a monstrous world where he himself was the monster. He was alone. The past was dead, the future was unimaginable. What certainty had he that a single human creature now living was on his side? And what way of knowing that the dominion of the Party would not endure FOR EVER?",
-"He put the white knight back in its place, but for the moment he could not settle down to serious study of the chess problem. His thoughts wandered again. Almost unconsciously he traced with his finger in the dust on the table: 2+2=5 'They can't get inside you,' she had said.",
-"From its release to November 2020, Roblox's sound effect for when a character dies was an 'oof' sound, which became a substantial part of the platform's reputation due to its status as a meme. The sound was originally produced by video game composer Tommy Tallarico for the 2000 video game Messiah, and he and Roblox entered into a copyright dispute. The dispute ended when Roblox agreed to pull the sound from their platform and replace it with another death sound, and Tallarico agreed to allow Roblox to release the sound again at a later date on its marketplace, which game developers on the platform would be able to purchase for a price of $1.",
-"The Deepwater Horizon drilling rig explosion was an April 20, 2010 explosion and subsequent fire on the Deepwater Horizon semi-submersible mobile offshore drilling unit, which was owned and operated by Transocean and drilling for BP in the Macondo Prospect oil field about 40 miles (64 km) southeast off the Louisiana coast. The explosion and subsequent fire resulted in the sinking of the Deepwater Horizon and the deaths of 11 workers; 17 others were injured. The same blowout that caused the explosion also caused an oil well fire and a massive offshore oil spill in the Gulf of Mexico, considered the largest accidental marine oil spill in the world, and the largest environmental disaster in U.S. history.",
-"Maple syrup is a syrup usually made from the xylem sap of sugar maple, red maple, or black maple trees, although it can also be made from other maple species. In cold climates, these trees store starch in their trunks and roots before winter; the starch is then converted to sugar that rises in the sap in late winter and early spring. Maple trees are tapped by drilling holes into their trunks and collecting the sap, which is processed by heating to evaporate much of the water, leaving the concentrated syrup.",
-"По данным ООН на 27 мая, с начала вторжения погибли не менее 4031 и были ранены не менее 4735 мирных жителей, причём реальные потери, как предполагается, гораздо выше; были разрушены или повреждены сотни домов; город Волноваха к началу марта был уничтожен почти полностью. По сообщениям ООН и международных гуманитарных организаций Amnesty International и Human Rights Watch, российские войска наносят неизбирательные ракетные удары по жилым кварталам, больницам и прочим объектам социальной инфраструктуры Украины. Также фиксируются удары по жилым районам в ДНР и ЛНР с гибелью мирных жителей.",
-"六四事件"
+const s = [
+    "From its release to November 2020, Roblox's sound effect for when a character dies was an 'oof' sound, which became a substantial part of the platform's reputation due to its status as a meme. The sound was originally produced by video game composer Tommy Tallarico for the 2000 video game Messiah, and he and Roblox entered into a copyright dispute. The dispute ended when Roblox agreed to pull the sound from their platform and replace it with another death sound, and Tallarico agreed to allow Roblox to release the sound again at a later date on its marketplace, which game developers on the platform would be able to purchase for a price of US$1.",
+    'Extreme ironing (also called EI) is an extreme sport in which people take ironing boards to remote locations and iron items of clothing. According to the Extreme Ironing Bureau, extreme ironing is "the latest danger sport that combines the thrills of an extreme outdoor activity with the satisfaction of a well-pressed shirt."Part of the attraction and interest the media has shown towards extreme ironing seems to center on the issue of whether it is really a sport or not. It is widely considered to be tongue-in-cheek. Some locations where such performances have taken place include a mountainside of a difficult climb; a forest; in a canoe; while skiing or snowboarding; on top of large bronze statues; in the middle of a street; underwater; in the middle of the M1 motorway; race; while parachuting; and under the ice sheet of a frozen lake. The performances have been conducted solo or by groups.',
+    "At 6:05 p.m. CDT on Wednesday, August 1, 2007, with rush hour bridge traffic moving slowly through the limited number of lanes, the central span of the bridge suddenly gave way, followed by the adjoining spans. The structure and deck collapsed into the river and onto the riverbanks below, the south part toppling 81 feet (25 m) eastward in the process. A total of 111 vehicles were involved, sending their occupants and 18 construction workers as far as 115 feet (35 m) down to the river or onto its banks. Northern sections fell into a rail yard, landing on three unoccupied and stationary freight cars. Sequential images of the collapse were taken by an outdoor security camera located at the parking lot entrance of the control facility for the Lower Saint Anthony Falls Lock and Dam. The immediate aftermath of the collapse was also captured by a Mn/DOT traffic camera that was facing away from the bridge during the collapse itself. The federal government immediately launched a National Transportation Safety Board (NTSB) investigation. NTSB chairman Mark Rosenker, along with a number of investigators, arrived on scene nine hours after the collapse. Rosenker remained in Minneapolis for nearly one week, serving as the government's designated primary interface with federal, state and local officials as well as briefing the press on the status of the investigation.",
+    "Corn starch is used as a thickening agent in liquid-based foods (e.g., soup, sauces, gravies, custard), usually by mixing it with a lower-temperature liquid to form a paste or slurry. It is sometimes preferred over flour alone because it forms a translucent, rather than opaque mixture. As the starch is heated over 203 °F (95 °C), the molecular chains unravel, allowing them to collide with other starch chains to form a mesh, thickening the liquid (Starch gelatinization). However, continued boiling breaks up the molecules and thins the liquid. Cornstarch is usually included as an anticaking agent in powdered sugar (icing or confectioner's sugar). A common substitute is arrowroot starch, which replaces the same amount of corn starch. Food producers reduce production costs by adding varying amounts of corn starch to foods, for example to cheese and yogurt. Chicken nuggets with a thin outer layer of corn starch allows increased oil absorption and crispness after the latter stages of frying.",
+    'If rapid combustion occurs in a confined space, enormous overpressures can build up, causing major structural damage and flying debris. The sudden release of energy from a "detonation" can produce a shockwave, either in open air or in a confined space. If the spread of flame is at subsonic speed, the phenomenon is sometimes called a "deflagration", although looser usage calls both phenomena "explosions". Dust explosions may be classified as being either "primary" or "secondary" in nature. Primary dust explosions may occur inside process equipment or similar enclosures, and are generally controlled by pressure relief through purpose-built ducting to the external atmosphere. Secondary dust explosions are the result of dust accumulation inside a building being disturbed and ignited by the primary explosion, resulting in a much more dangerous uncontrolled explosion that can affect the entire structure. Historically, fatalities from dust explosions have largely been the result of secondary dust explosions.',
+    "Oog acts as the junction of the road connecting the regional capitals of Burao and Erigavo. Oog is situated on Somaliland's main road connecting towns and cities like Borama, Hargeisa, Berbera and Burao to Somalia. Oog is located 151 km (94 mi) from Burao, 100 km (62 mi) from Las Anod, and 239 km (149 mi) from Erigavo. 10 km (6.2 mi) north of Oog is the nearby town of Badweyn, home to a substantial mosque and a multiple-trunked tree that stands alongside the main road. South of Oog, in the Haud, the rare collared lark can be found as well as the native dibatag antelope. Oog is home to a Somaliland National Army base.",
+    "On January 3, 1961, SL-1 was being prepared for restart after a shutdown of eleven days over the holidays. Maintenance procedures required that Rod 9 be manually withdrawn a few inches to reconnect it to its drive mechanism. At 9:01 pm, this rod was suddenly withdrawn too far, causing SL-1 to go prompt critical instantly. In four milliseconds, the heat generated by the resulting enormous power excursion caused fuel inside the core to melt and to explosively vaporize. The expanding fuel produced an extreme pressure wave that blasted water upward, striking the top of the reactor vessel with a peak pressure of 10,000 pounds per square inch (69,000 kPa). The slug of water was propelled at about 159 feet per second (48 m/s) with average pressure of around 500 pounds per square inch (3,400 kPa). This extreme form of water hammer propelled the entire reactor vessel upward at about 27 feet per second (8.2 m/s), while the shield plugs were ejected at about 85 feet per second (26 m/s). With six holes on the top of the reactor vessel, high pressure water and steam sprayed the entire room with radioactive debris from the damaged core. A later investigation concluded that the 26,000-pound (12,000 kg) (or thirteen short tons) vessel had jumped 9 feet 1 inch (2.77 m), parts of it striking the ceiling of the reactor building before settling back into its original location, and depositing insulation and gravel on the operating floor. If not for the vessel's #5 seal housing hitting the overhead crane, the pressure vessel had enough upward momentum to rise about 10 feet (3.0 m). The excursion, steam explosion, and vessel movement took two to four seconds",
+    "Humans (Homo sapiens) are the most abundant and widespread species of primate, characterized by bipedalism and large, complex brains. This has enabled the development of advanced tools, culture, and language. Humans are highly social and tend to live in complex social structures composed of many cooperating and competing groups, from families and kinship networks to political states. Social interactions between humans have established a wide variety of values, social norms, and rituals, which bolster human society. Curiosity and the human desire to understand and influence the environment and to explain and manipulate phenomena have motivated humanity's development of science, philosophy, mythology, religion, and other fields of study.",
+    "Grandville High School offers a wide variety of academic and extracurricular offerings, including 17 Advanced Placement courses, forensics, a competitive engineering and robotics team, jazz band, an award-winning marching band, choir, chamber and concert orchestras, symphony strings, philharmonic orchestra, theater, emergency medical technician certification, and after-school clubs such as photography club and chess club. Its AP Calculus program often receives national attention, with GHS staff training educators at the national level. Grandville High School was presented with the prestigious Blue Ribbon School Award in 2005-2006, and has had several recipients of AP Scholar and National Merit Recognition Awards. In 2012, the College Board recognized the school with its Advanced Placement District of the Year Awards—Annual Honor Roll. In 2014, U.S. News & World Report named Grandville High School to the top 3% of schools in Michigan and the top 5% in the nation in its Best High Schools rankings. The high school uses automatic response clickers in the classrooms. This technology provides instant feedback to teachers to help them find out if the students understand a concept or need further instruction. The responses are anonymous yet provide the necessary feedback."
+]
+
+
+const slink = [
+    "https://en.wikipedia.org/wiki/Roblox#%22Oof%22_sound_effect",
+    "https://en.wikipedia.org/wiki/Extreme_ironing",
+    "https://en.wikipedia.org/wiki/I-35W_Mississippi_River_bridge",
+    "https://en.wikipedia.org/wiki/Corn_starch",
+    "https://en.wikipedia.org/wiki/Dust_explosion",
+    "https://en.wikipedia.org/wiki/Oog",
+    "https://en.wikipedia.org/wiki/SL-1",
+    "https://en.wikipedia.org/wiki/Human",
+    "https://en.wikipedia.org/wiki/Grandville_Public_Schools"
+]
+
+const stitle = [
+    "Roblox",
+    "Extreme Ironing",
+    "I-35W Mississippi River Bridge",
+    "Corn Starch",
+    "Dust Explosion",
+    "Oog",
+    "SL-1",
+    "Homosapian",
+    "Grandville Public Schools"
 ]
 
 function generateWords(type, list, words) {
@@ -952,22 +971,12 @@ function generateWords(type, list, words) {
         }
         return genNum
     } else if (type == 2) {
-        let genSent = list[Math.floor(Math.random() * list.length - 1) + 1]
+        let index = Math.floor(Math.random() * list.length - 1) + 1
+        sslect = index
+        let genSent = list[index]
         return genSent
     }
 }
-
-
-
-/* This is for words counted not words per rounds per minute
-
-function typingtest(kys) {
-    let bs = kys.match(/\s/g, "")
-    let words = bs ? bs.length : 0
-
-    document.getElementById("wpm-input").innerHTML = words + " WPM"
-}
-*/
 
 let wcount = 0, keycount = 0, charcount, errcount, wrongword 
 
@@ -976,10 +985,13 @@ let x = false //debounce for timer
 let orig = 0 //store timer as temp
 
 let counter
-
+let sd = false
+let sslect = 0
 let q = generateWords(0, w, 200)
 
 window.onload = () => {
+    document.getElementById("results").style.visibility = "hidden"
+
     document.getElementById("a").innerHTML = q
     console.log("loaded");
     
@@ -993,9 +1005,6 @@ window.onload = () => {
         blinker("stop")
         console.log("blur and stop");
     })
-    //FIX THIS GARBAGE Z INDEX IS SCREWED
-    //HEADER IS SOMEHOW BELOW CONTAINER WHICH PREVENTS BUTTONS FROM WORKING
-    //☻☻☻☻☻☺☺☺☺
     document.getElementById("sent").addEventListener("click", function(e) {
         e.preventDefault()
         q = generateWords(2, s, 1)
@@ -1003,7 +1012,12 @@ window.onload = () => {
         document.getElementById("a").innerHTML = q
         document.getElementById("b").innerHTML = ""
         document.getElementById("c").innerHTML = ""
-        document.getElementById("d").innerHTML = ""
+
+        document.getElementById("material").style.visibility = "visible"
+        document.getElementById("material").style.opacity = "1"
+        document.getElementById("mat-link").innerHTML = stitle[sslect]
+        document.getElementById("mat-link").setAttribute("href", slink[sslect])
+        sd = true
     })
     
     document.getElementById("word").addEventListener("click", function(e) {
@@ -1013,6 +1027,9 @@ window.onload = () => {
         document.getElementById("a").innerHTML = q
         document.getElementById("b").innerHTML = ""
         document.getElementById("c").innerHTML = ""
+        document.getElementById("material").style.visibility = "hidden"
+        document.getElementById("material").style.opacity = "0"
+        sd = false
     })
     
     document.getElementById("num").addEventListener("click", function(e) {
@@ -1022,7 +1039,9 @@ window.onload = () => {
         document.getElementById("a").innerHTML = q
         document.getElementById("b").innerHTML = ""
         document.getElementById("c").innerHTML = ""
-        document.getElementById("d").innerHTML = ""
+        document.getElementById("material").style.visibility = "hidden"
+        document.getElementById("material").style.opacity = "0"
+        sd = false
     })
 
     document.getElementById("30s").addEventListener("click", function(e) {//THESE DON't WORK FOR SOME REASON AND IDK
@@ -1045,7 +1064,21 @@ window.onload = () => {
         orig = 3600
         document.getElementById("time").innerHTML = timelength
     })
-    
+
+    document.getElementById("15s").addEventListener("click", function(e) {//THESE DON't WORK FOR SOME REASON AND IDK
+        e.preventDefault()
+        timelength = 15
+        orig = 15
+        document.getElementById("time").innerHTML = timelength
+    })
+
+    document.getElementById("31536000s").addEventListener("click", function(e) {//THESE DON't WORK FOR SOME REASON AND IDK
+        e.preventDefault()
+        timelength = 31536000
+        orig = 31536000
+        document.getElementById("time").innerHTML = timelength
+    })
+
     document.getElementById("dark").addEventListener("click", (e) => {
         e.preventDefault()
         for (let i = 0; i < document.getElementsByTagName("a").length; i++) {
@@ -1065,6 +1098,27 @@ window.onload = () => {
             document.getElementsByClassName("divt")[i].style.color = "#ffffff"
         }
         document.body.style.backgroundColor = "#0D1F2D"
+    })
+
+    document.getElementById("light").addEventListener("click", (e) => {
+        e.preventDefault()
+        for (let i = 0; i < document.getElementsByTagName("a").length; i++) {
+            document.getElementsByTagName("a")[i].style.color = "rgb(0, 8, 20)"
+        }
+        for (let i = 0; i < document.getElementsByTagName("p").length; i++) {
+            document.getElementsByTagName("p")[i].style.color = "rgb(0, 8, 20)"
+        }
+        for (let i = 0; i < document.getElementsByTagName("h1").length; i++) {
+            document.getElementsByTagName("h1")[i].style.color = "rgb(0, 8, 20)"
+        }
+        for (let i = 0; i < document.getElementsByTagName("li").length; i++) {
+            document.getElementsByTagName("li")[i].style.color = "rgb(0, 8, 20)"
+        }
+        for (let i = 0; i < document.getElementsByClassName("divt").length; i++) {
+            document.getElementsByClassName("divt")[i].style.backgroundColor = "rgba(0,0,0,0)"
+            document.getElementsByClassName("divt")[i].style.color = "rgba(0,0,0,.3)"
+        }
+        document.body.style.backgroundColor = "#ffffff"
     })
 
     let debounce = false
@@ -1115,7 +1169,8 @@ function kyp(e) { //call this everytime keyup
         x = true
         orig = timelength
         document.getElementById("wpm-input").style.visibility = "visible"
-        document.getElementById("accuracy-input").style.visibility = "visible"
+        document.getElementById("material").style.visibility = "hidden"
+        document.getElementById("material").style.opacity = "0"
         counter = setInterval(timer, 1000)
         console.log("timer started");
     }
@@ -1124,11 +1179,11 @@ function kyp(e) { //call this everytime keyup
     let a = document.getElementById("a").innerText
     let b = document.getElementById("b").innerText
     let c = document.getElementById("c").innerText
-    wcount = c.match(/\s/g, "") ? c.match(/\s/g, "").length : 0
+    //wcount = c.match(/\s/g, "") ? c.match(/\s/g, "").length : 0 Not sure if this is needed
     cursorpos = c.length
     if ((keycount + 5) < c.length) {
         c = "";
-        document.getElementById("ctext").innerText = c;
+        document.getElementById("c").innerText = c;
     }
     blinker();
     console.log("blinker called and started");
@@ -1158,26 +1213,6 @@ function kyp(e) { //call this everytime keyup
         }
     }
 }
-
-function kyd(e) {
-    var cARR = [33, 34, 35, 36, 37, 38, 39, 40];
-    if (window.event) { // IE                    
-        keynum = e.keyCode;
-    } else if (e.which) {
-        keynum = e.which;
-    }
-    if (cARR.indexOf(keynum) > -1) {
-        e.preventDefault();
-        return false;
-    }
-    if (keynum == 86 && e.ctrlKey) {
-        e.preventDefault();
-        return false;
-    }
-
-}
-
-wcount = 0, keycount = 0, charcount, errcount, wrongword 
  
 function timer() {
     if (timelength <= 0) {
@@ -1191,11 +1226,14 @@ function timer() {
         x = false
         document.getElementById("results").style.visibility = "visible"
         document.getElementById("results").style.opacity = "1"
+        if (sd == true) {
+            document.getElementById("material").style.visibility = "visible"
+            document.getElementById("material").style.opacity = "1"
+        }
         updateResults()
         document.getElementById("a").contentEditable = false
         document.getElementById("b").contentEditable = false
         document.getElementById("c").contentEditable = false
-        document.getElementById("d").contentEditable = false
         console.log("updated results");
         return
     }
@@ -1213,14 +1251,16 @@ function timer() {
         document.getElementById("a").contentEditable = true
         document.getElementById("b").contentEditable = true
         document.getElementById("c").contentEditable = true
-        document.getElementById("d").contentEditable = true
 
         document.getElementById("a").innerHTML = q
         document.getElementById("b").innerHTML = ""
         document.getElementById("c").innerHTML = ""
-        document.getElementById("d").innerHTML = ""
         document.getElementById("wpm-input").style.visibility = "hidden"
-        document.getElementById("accuracy-input").style.visibility = "hidden"
+        document.getElementById("wpm-input").style.opacity = "0"
+        if (sd == true) {
+            document.getElementById("material").style.visibility = "visible"
+            document.getElementById("material").style.opacity = "1"
+        }
         wcount = 0, keycount = 0, charcount = 0, errcount = 0,  wrongword = 0
         updateResults()
         console.log("transitioned and reset");
@@ -1251,10 +1291,12 @@ function blinker(active) {
     console.log("blinked");
 }
 function updateResults() {
-    document.getElementById("r-wpm").innerHTML = "Error: 0"
-    document.getElementById("correctw").innerHTML = wcount
-    document.getElementById("incorrectw").innerHTML = errcount
-    document.getElementById("char").innerHTML = wcount + " Words"
-    document.getElementById("totchar").innerHTML = keycount + " Characters"
+    console.log(orig, wcount)
+    document.getElementById("r-wpm").innerHTML = (wcount/(orig/60)) + " WPM" 
+    document.getElementById("correctw").innerHTML = wcount - wrongword
+    document.getElementById("incorrectw").innerHTML = wrongword
+    document.getElementById("correctc").innerHTML = charcount - errcount
+    document.getElementById("incorrectc").innerHTML = errcount
+    document.getElementById("char").innerHTML = 100 - ((charcount - errcount)/ charcount).toFixed(2) + "%"
     console.log("updated");
 }
