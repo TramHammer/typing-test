@@ -91,7 +91,7 @@ header a {
     background-color: rgb(255,255,255);
     color: rgba(0,0,0,.3);
     z-index: 2;
-    height: 15rem;
+    height: 30rem;
     font-size: 1rem;
     overflow: hidden;
     opacity: 1;
@@ -101,7 +101,7 @@ header a {
     outline: none;
     border: 0px none;
     z-index: 3;
-    height: 15rem;
+    height: 30rem;
     overflow: hidden;
     font-size: 1rem;
     color:rgba(0, 8, 20, .5);
@@ -118,19 +118,7 @@ header a {
     font-size: 1rem;
     outline: none;
     z-index: 4;
-    height: 15rem;
-}
-
-#d {
-    outline: none;
-    border: 0px none;
-    font-size: 1rem;
-    width: 100%;
-    overflow: hidden;
-    z-index: 1;
-    height: 15rem;
-    color:rgba(0, 8, 20, .5);
-    opacity: 1;
+    height: 30rem;
 }
 
 #input section {
@@ -165,7 +153,13 @@ header a {
 #results {
     list-style-type: none;
     text-decoration-style: none;
-    visibility: visible;
+    visibility: hidden;
+    transition: visibility 1s, opacity 0.5s;
+}
+
+#material {
+    text-align: center;
+    visibility: hidden;
     transition: visibility 1s, opacity 0.5s;
 }
 
