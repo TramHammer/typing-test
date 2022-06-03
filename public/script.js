@@ -1291,7 +1291,6 @@ function blinker(active) {
     console.log("blinked");
 }
 function updateResults() {
-    console.log(orig, wcount)
     document.getElementById("r-wpm").innerHTML = (wcount/(orig/60)) + " WPM" 
     document.getElementById("correctw").innerHTML = wcount - wrongword
     document.getElementById("incorrectw").innerHTML = wrongword
