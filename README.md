@@ -27,5 +27,5 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 TramHammer - [@TramHammer_](@TramHammer_) - email@example.com
 
-Project Link: [https://github.com/TramHammer/mjboss.projectmi-workatidu.com](https://github.com/TramHammer/mjboss.projectmi-workatidu.com)
+Project Link: [https://github.com/TramHammer/mjboss.projectmi-workatidu.com](https://github.com/TramHammer/typingtest)
 
