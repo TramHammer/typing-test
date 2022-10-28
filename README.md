@@ -21,7 +21,7 @@ _For setting up this project for local development and or modification, there ar
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the GNU General License. See `LICENSE.txt` for more information.
 
 
 <!-- CONTACT -->
