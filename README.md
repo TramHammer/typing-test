@@ -1,7 +1,7 @@
 # A Typing Test
 A final project for AP Computer Science Principles
 
-This site is [live](TramHammer.github.io/typingtest/public).
+This site is [live](TramHammer.github.io/typing-test/public).
 
 <!-- GETTING STARTED -->
 ## Getting Started
